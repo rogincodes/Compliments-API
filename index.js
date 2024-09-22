@@ -9,12 +9,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // GET all compliments
-app.get("/compliments", (req, res) => {
+app.get("/", (req, res) => {
   res.json(compliments);
 });
 
 // GET a random compliment
-app.get("/compliments/random", (req, res) => {
+app.get("/random", (req, res) => {
   const randomNumber = Math.floor(Math.random() * compliments.length);
   res.json(compliments[randomNumber]);
 });
